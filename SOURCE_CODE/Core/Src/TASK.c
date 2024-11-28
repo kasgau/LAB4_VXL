@@ -32,3 +32,17 @@ void Led_orange()
 {
 	HAL_GPIO_TogglePin(GPIOB, LED_ORANGE_Pin);
 }
+
+void off_all()
+{
+	HAL_GPIO_WritePin(GPIOA, LED_RED_Pin,SET);
+	HAL_GPIO_WritePin(GPIOA, LED_BLUE_Pin,SET);
+	HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin,SET);
+	HAL_GPIO_WritePin(GPIOA, LED_ORANGE_Pin,SET);
+
+
+
+
+
+
+}

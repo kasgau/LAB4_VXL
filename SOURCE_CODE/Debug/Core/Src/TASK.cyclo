@@ -3,3 +3,4 @@
 ../Core/Src/TASK.c:21:6:Led_blue	1
 ../Core/Src/TASK.c:26:6:Led_green	1
 ../Core/Src/TASK.c:31:6:Led_orange	1
+../Core/Src/TASK.c:36:6:off_all	1

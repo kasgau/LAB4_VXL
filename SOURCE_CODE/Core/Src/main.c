@@ -99,20 +99,20 @@ int main(void)
 
 
   SCH_Add_Task(Led_red, 1, 500);
-  SCH_Add_Task(Led_blue, 1, 1000);
-  SCH_Add_Task(Led_green, 1, 1500);
-  SCH_Add_Task(Led_yellow, 1, 2000);
-  SCH_Add_Task(Led_orange, 1, 2500);
+  SCH_Add_Task(Led_blue, 1000, 0);
+  SCH_Add_Task(Led_green, 2000, 2000);
+  SCH_Add_Task(Led_yellow, 3000, 3000);
+  SCH_Add_Task(Led_orange, 4000, 4000);
   SCH_Add_Task(	getKeyInput, 1, 10);
   SCH_Add_Task(fsm_for_button_processing, 0, 10);
 
 
 
   HAL_GPIO_TogglePin(GPIOB, LED_PINK_Pin);
-
   while (1)
   {
     /* USER CODE END WHILE */
+
 	  SCH_Dispatch_Tasks();
     /* USER CODE BEGIN 3 */
   }
@@ -216,13 +216,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|LED_BLUE_Pin|LED_YELLOW_Pin|LED_GREEN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|LED_BLUE_Pin|LED_GREEN_Pin|LED_YELLOW_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LED_ORANGE_Pin|LED_PINK_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_RED_Pin LED_BLUE_Pin LED_YELLOW_Pin LED_GREEN_Pin */
-  GPIO_InitStruct.Pin = LED_RED_Pin|LED_BLUE_Pin|LED_YELLOW_Pin|LED_GREEN_Pin;
+  /*Configure GPIO pins : LED_RED_Pin LED_BLUE_Pin LED_GREEN_Pin LED_YELLOW_Pin */
+  GPIO_InitStruct.Pin = LED_RED_Pin|LED_BLUE_Pin|LED_GREEN_Pin|LED_YELLOW_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

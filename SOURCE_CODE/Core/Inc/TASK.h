@@ -14,6 +14,7 @@ void Led_yellow();
 void Led_blue();
 void Led_green();
 void Led_orange();
+void off_all();
 
 
 #endif /* INC_TASK_H_ */

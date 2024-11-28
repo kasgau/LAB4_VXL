@@ -3,3 +3,4 @@
 ../Core/Src/TASK.c:21:6:Led_blue	8	static
 ../Core/Src/TASK.c:26:6:Led_green	8	static
 ../Core/Src/TASK.c:31:6:Led_orange	8	static
+../Core/Src/TASK.c:36:6:off_all	8	static
