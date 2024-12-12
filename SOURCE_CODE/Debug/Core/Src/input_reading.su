@@ -1,2 +1,0 @@
-../Core/Src/input_reading.c:17:6:getKeyInput	16	static
-../Core/Src/input_reading.c:28:15:is_button_pressed	16	static
